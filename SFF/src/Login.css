@@ -1,0 +1,259 @@
+/* Login.css */
+
+/* Basic Reset and Font */
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif; /* Using Inter font */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Page Container */
+.login-page-container {
+    /* Vibrant background image for a punchy look */
+    /* REPLACE THIS URL with your actual image URL */
+    background-color: #f97316;
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    position: relative; /* Needed for overlay positioning */
+    overflow: hidden; /* Hide overflow from image */
+}
+
+/* Overlay for readability over the background image */
+.login-page-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3); /* Dark overlay for text readability */
+    z-index: 0; /* Place behind the content */
+}
+
+/* Login Card */
+.login-card {
+    background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white card */
+    padding: 2.5rem; /* Increased padding for more breathing room */
+    border-radius: 1rem; /* More rounded corners */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); /* Stronger shadow */
+    max-width: 30rem; /* Slightly wider card */
+    width: 100%;
+    border: 1px solid #f97316; /* Orange border to match theme */
+    position: relative; /* Ensure card is above the overlay */
+    z-index: 1;
+}
+
+/* Text Alignment and Margins */
+.text-center {
+    text-align: center;
+}
+
+.mb-8 {
+    margin-bottom: 2rem;
+}
+
+/* Titles and Subtitles */
+.main-title {
+    font-size: 2.5rem; /* Slightly larger title */
+    font-weight: 800;
+    color: #f97316; /* More vibrant orange */
+    margin-bottom: 0.75rem; /* Increased margin */
+    letter-spacing: -0.025em; /* Subtle letter spacing */
+}
+
+.subtitle {
+    color: #374151; /* Darker gray for better contrast */
+    font-size: 1.25rem; /* Slightly larger subtitle */
+}
+
+/* Form Spacing */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Form Group (Label + Input) */
+.form-group {
+    margin-bottom: 0.5rem; /* Adjusted for better spacing with gap */
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem; /* Slightly larger label font */
+    font-weight: 600; /* Bolder label */
+    color: #374151;
+    margin-bottom: 0.35rem;
+}
+
+.form-group input {
+    margin-top: 0.25rem;
+    display: block;
+    width: 100%;
+    padding: 0.65rem 1.1rem; /* Slightly more padding */
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem; /* More rounded input fields */
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075); /* Subtle inner shadow */
+    font-size: 1rem; /* Standard font size for inputs */
+    outline: none;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.form-group input:focus {
+    border-color: #f97316;
+    box-shadow: 0 0 0 1px #f97316, 0 0 0 4px rgba(249, 115, 22, 0.3); /* More prominent focus ring */
+}
+
+
+/* Login Button */
+.login-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0.85rem 1.25rem; /* More padding for a larger button */
+    border: none; /* No border for a cleaner look */
+    border-radius: 0.5rem; /* More rounded button */
+    background-color: #f97316; /* Vibrant orange */
+    background-image: linear-gradient(to right, #f97316, #ea580c); /* Subtle gradient */
+    font-size: 1.25rem; /* Larger font size */
+    font-weight: 700; /* Bolder text */
+    color: #ffffff;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Initial shadow */
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    outline: none;
+}
+
+.login-button:hover {
+    background-color: #ea580c; /* Darker orange on hover */
+    background-image: linear-gradient(to right, #ea580c, #f97316); /* Reverse gradient on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1); /* More pronounced shadow on hover */
+}
+
+.login-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.4); /* Stronger focus ring */
+}
+
+/* Signup Option */
+.signup-option {
+    margin-top: 1.75rem; /* Increased margin */
+    text-align: center;
+    font-size: 0.9rem; /* Slightly larger font */
+    color: #4b5563;
+}
+
+.create-account-button {
+    font-weight: 600; /* Bolder text */
+    color: #f97316;
+    cursor: pointer;
+    margin-left: 0.3rem; /* Slightly more margin */
+    background: none;
+    border: none;
+    padding: 0;
+    text-decoration: underline;
+    transition: color 0.2s ease-in-out;
+    outline: none;
+}
+
+.create-account-button:hover {
+    color: #ea580c;
+}
+
+.create-account-button:focus {
+    outline: none;
+}
+
+/* Message Box */
+.message-box {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    color: white;
+    min-width: 250px; /* Ensure message box has a decent width */
+    text-align: center;
+}
+
+.message-box.visible {
+    opacity: 1;
+}
+
+.message-box.hidden {
+    display: none;
+}
+
+.message-box.success {
+    background-color: #f97316; /* Orange-500 */
+}
+
+.message-box.error {
+    background-color: #ef4444; /* Red-500 */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .login-card {
+        padding: 2rem;
+        max-width: 90%; /* More fluid on smaller screens */
+    }
+    .main-title {
+        font-size: 2.25rem;
+    }
+    .subtitle {
+        font-size: 1.1rem;
+    }
+    .login-button {
+        font-size: 1.1rem;
+        padding: 0.8rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-card {
+        padding: 1.5rem;
+        border-radius: 0.75rem;
+    }
+    .main-title {
+        font-size: 2rem;
+    }
+    .subtitle {
+        font-size: 1rem;
+    }
+    .form-group label {
+        font-size: 0.85rem;
+    }
+    .form-group input {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    .login-button {
+        font-size: 1rem;
+        padding: 0.75rem 1rem;
+    }
+    .signup-option {
+        font-size: 0.8rem;
+    }
+    .message-box {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+        min-width: unset;
+        width: 80%;
+    }
+}
