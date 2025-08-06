@@ -1,0 +1,133 @@
+/* General container for the entire signup page */
+.signup-page-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f3f4f6; /* bg-gray-100 */
+    padding: 1rem; /* p-4 */
+    font-family: 'Inter', sans-serif; /* Assuming Inter font */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Styles for the message box */
+.message-box {
+    position: fixed;
+    top: 1rem; /* top-4 */
+    left: 50%;
+    transform: translateX(-50%); /* -translate-x-1/2 */
+    padding: 0.75rem 1.5rem; /* px-6 py-3 */
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+    color: #ffffff; /* text-white */
+    z-index: 50;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.message-box.success {
+    background-color: #22c55e; /* bg-green-500 */
+}
+
+.message-box.error {
+    background-color: #ef4444; /* bg-red-500 */
+}
+
+/* Styles for the signup form */
+.signup-form {
+    background-color: #ffffff; /* bg-white */
+    padding: 2rem; /* p-8 */
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); /* shadow-2xl */
+    width: 100%;
+    max-width: 28rem; /* max-w-md */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* space-y-6 */
+    border: 1px solid #e5e7eb; /* border border-gray-200 */
+}
+
+.signup-form h2 {
+    font-size: 2.25rem; /* text-3xl */
+    font-weight: 800; /* font-extrabold */
+    color: #111827; /* text-gray-900 */
+    text-align: center;
+    margin-bottom: 1.5rem; /* mb-6 */
+}
+
+/* Input group styling */
+.input-group {
+    position: relative;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 500; /* font-medium */
+    color: #374151; /* text-gray-700 */
+    margin-bottom: 0.25rem; /* mb-1 */
+}
+
+.input-field {
+    width: 100%;
+    padding: 0.5rem 1rem; /* px-4 py-2 */
+    border: 1px solid #d1d5db; /* border border-gray-300 */
+    border-radius: 0.5rem; /* rounded-lg */
+    color: #111827; /* text-gray-900 */
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* transition duration-200 ease-in-out */
+}
+
+.input-field::placeholder {
+    color: #9ca3af; /* placeholder-gray-400 */
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: #3b82f6; /* focus:border-blue-500 */
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5); /* focus:ring-blue-500 focus:ring-2 */
+}
+
+/* Button styles */
+.signup-button,
+.back-to-login-button {
+    width: 100%;
+    padding: 0.75rem 1rem; /* py-3 px-4 */
+    border-radius: 0.5rem; /* rounded-lg */
+    font-weight: 600; /* font-semibold */
+    font-size: 1.125rem; /* text-lg */
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* transition duration-300 ease-in-out transform */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+}
+
+.signup-button {
+    background-color: #16a34a; /* bg-green-600 */
+    color: #ffffff; /* text-white */
+}
+
+.signup-button:hover {
+    background-color: #15803d; /* hover:bg-green-700 */
+    transform: scale(1.02); /* hover:scale-105 */
+}
+
+.signup-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.5), 0 0 0 6px rgba(255, 255, 255, 0.5); /* focus:ring-green-500 focus:ring-2 focus:ring-offset-2 */
+}
+
+.back-to-login-button {
+    background-color: #e5e7eb; /* bg-gray-200 */
+    color: #374151; /* text-gray-800 */
+}
+
+.back-to-login-button:hover {
+    background-color: #d1d5db; /* hover:bg-gray-300 */
+    transform: scale(1.02); /* hover:scale-105 */
+}
+
+.back-to-login-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(156, 163, 175, 0.5), 0 0 0 6px rgba(255, 255, 255, 0.5); /* focus:ring-gray-400 focus:ring-2 focus:ring-offset-2 */
+}

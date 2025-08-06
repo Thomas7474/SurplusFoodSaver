@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Login.css'; // Import the CSS file for styling
+import { useNavigate } from 'react-router-dom';
 
 // Main App component to render the Login page
 const App = () => {
@@ -8,6 +9,11 @@ const App = () => {
 
 // Login component
 const Login = () => {
+
+
+const navigate = useNavigate();
+
+
   // State to manage input values
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -39,7 +45,7 @@ const Login = () => {
   // Event handler for Create New Account button click
   const handleCreateAccount = (event) => {
     event.preventDefault(); // Prevent default button behavior
-    showMessage('Redirecting to account creation page...', 'success');
+    navigate('/Signup');
     // In a real application, you would navigate to a registration page
     console.log('Create new account clicked');
   };
