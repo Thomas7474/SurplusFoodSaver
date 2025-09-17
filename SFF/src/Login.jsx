@@ -50,6 +50,13 @@ const navigate = useNavigate();
     console.log('Create new account clicked');
   };
 
+  const handleHomePage = (event) => {
+    event.preventDefault(); // Prevent default button behavior
+    navigate('/HomePage');
+    // In a real application, you would navigate to a registration page
+    console.log('went to home page');
+  };
+
   return (
     <div className="login-page-container">
       {/* Message Box */}
@@ -96,6 +103,7 @@ const navigate = useNavigate();
           <button
             type="submit"
             className="login-button"
+            onClick={handleHomePage}
           >
             Login
           </button>
